@@ -43,8 +43,6 @@ export default function WhyChooseSection() {
   return (
     <section className="w-full bg-white py-24 px-4 md:px-8">
       <div className="max-w-[1180px] mx-auto">
-
-        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-[34px] md:text-[54px] leading-[1.05] tracking-[-0.04em] font-medium text-[#202020]">
             Why choose our billing platform
@@ -56,8 +54,6 @@ export default function WhyChooseSection() {
             support business growth.
           </p>
         </div>
-
-        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 
           {features.map((feature) => (
@@ -65,8 +61,6 @@ export default function WhyChooseSection() {
               key={feature.title}
               className="rounded-[20px] bg-[#f8f8f8] border border-[#eeeeee] p-8 min-h-[260px] transition-all duration-300 hover:shadow-lg"
             >
-
-              {/* Icon */}
               <div className="mb-7">
                 <img
                   src={feature.icon}
@@ -74,17 +68,12 @@ export default function WhyChooseSection() {
                   className="w-[46px] h-[46px] object-contain"
                 />
               </div>
-
-              {/* Title */}
               <h3 className="text-[24px] leading-[1.15] tracking-[-0.03em] font-semibold text-black">
                 {feature.title}
               </h3>
-
-              {/* Description */}
               <p className="mt-5 text-[14px] md:text-[15px] leading-[1.7] text-[#666666]">
                 {feature.description}
               </p>
-
             </div>
           ))}
 

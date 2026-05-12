@@ -33,8 +33,6 @@ export default function TestimonialsSection() {
   return (
     <section className="w-full bg-white py-24 overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
-
-        {/* Heading */}
         <div className="text-center mb-16 px-4">
           <h2 className="text-[36px] md:text-[58px] leading-[1.05] tracking-[-0.04em] font-medium text-[#1f2740]">
             What our customers say
@@ -46,8 +44,6 @@ export default function TestimonialsSection() {
             effectively.
           </p>
         </div>
-
-        {/* Row 1 */}
         <div className="flex gap-5 mb-5 w-max animate-[marquee_20s_linear_infinite]">
 
           {[...testimonials, ...testimonials].map((item, index) => (
@@ -62,8 +58,6 @@ export default function TestimonialsSection() {
           ))}
 
         </div>
-
-        {/* Row 2 */}
         <div className="flex gap-5 w-max ml-[-180px] animate-[marqueeReverse_20s_linear_infinite]">
 
           {[...testimonials.slice().reverse(), ...testimonials.slice().reverse()].map((item, index) => (
@@ -79,8 +73,6 @@ export default function TestimonialsSection() {
 
         </div>
       </div>
-
-      {/* Keyframes */}
       <style jsx>{`
         @keyframes marquee {
           0% {

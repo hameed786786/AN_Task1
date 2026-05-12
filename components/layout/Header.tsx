@@ -5,7 +5,6 @@ export default function Header() {
     <header className="absolute top-0 left-0 right-0 z-50 flex justify-center w-full pt-8">
       <nav className="w-full px-6">
         <div className="mx-auto flex h-18 w-full max-w-310 items-center rounded-full bg-white px-6 shadow-[0_12px_40px_rgba(0,0,0,0.06)]">
-          {/* Left group: Logo + divider + links */}
           <div className="flex items-center">
             <div className="flex items-center gap-3">
               <img
@@ -63,8 +62,6 @@ export default function Header() {
               </Link>
             </div>
           </div>
-
-          {/* Right: Actions */}
           <div className="ml-auto flex items-center gap-6">
             <Link
               href="/login"

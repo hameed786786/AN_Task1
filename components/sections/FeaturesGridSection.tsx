@@ -5,11 +5,7 @@ export default function FeaturesGridSection() {
   return (
     <section className="w-full bg-white py-14 px-4 md:px-8">
       <div className="max-w-[1600px] mx-auto">
-
-        {/* TOP GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-
-          {/* LEFT */}
           <div className="flex flex-col gap-5">
 
             <FeatureCard
@@ -29,8 +25,6 @@ export default function FeaturesGridSection() {
             />
 
           </div>
-
-          {/* CENTER */}
           <div>
 
             <FeatureCard
@@ -42,8 +36,6 @@ export default function FeaturesGridSection() {
             />
 
           </div>
-
-          {/* RIGHT */}
           <div className="flex flex-col gap-5">
 
             <FeatureCard
@@ -65,8 +57,6 @@ export default function FeaturesGridSection() {
           </div>
 
         </div>
-
-        {/* BOTTOM CARD */}
         <div className="mt-5">
 
           <FeatureCard

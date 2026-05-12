@@ -27,8 +27,6 @@ export default function FeatureCard({
         ${className}
       `}
     >
-
-      {/* Content */}
       <div className="px-8 pt-7 shrink-0">
         <h3 className="text-[26px] leading-[1.05] tracking-[-0.04em] font-medium text-[#222]">
           {title}
@@ -38,8 +36,6 @@ export default function FeatureCard({
           {description}
         </p>
       </div>
-
-      {/* Image */}
       <div className="mt-auto w-full overflow-hidden">
         <img
           src={image}
@@ -47,7 +43,6 @@ export default function FeatureCard({
           className={`w-full object-cover object-top ${imageClassName}`}
         />
       </div>
-
     </div>
   );
 }

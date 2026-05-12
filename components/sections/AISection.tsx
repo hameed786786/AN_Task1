@@ -4,8 +4,6 @@ export default function AISection() {
   return (
     <section className="w-full bg-white py-24 px-4 md:px-8">
       <div className="max-w-[1180px] mx-auto">
-
-        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-[34px] md:text-[52px] leading-[1.05] tracking-[-0.04em] font-medium text-[#202020]">
             AI that simplifies your financial
@@ -19,16 +17,10 @@ export default function AISection() {
             with AI.
           </p>
         </div>
-
-        {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
-
-          {/* TOP LARGE CARD */}
           <div className="md:col-span-12 rounded-[28px] border border-[#ececec] bg-white p-6 shadow-sm">
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-
-              {/* LEFT */}
               <div className="pl-2">
                 <h3 className="text-[36px] leading-[1] tracking-[-0.04em] font-semibold text-black">
                   Smart Expense
@@ -42,8 +34,6 @@ export default function AISection() {
                   classify expenses
                 </p>
               </div>
-
-              {/* RIGHT IMAGE */}
               <div className="overflow-hidden rounded-[18px] border border-[#ececec]">
                 <img
                   src="/ai/expense-table.png"
@@ -54,8 +44,6 @@ export default function AISection() {
 
             </div>
           </div>
-
-          {/* AI Invoice */}
           <div className="md:col-span-7 rounded-[28px] border border-[#ececec] bg-white p-6 shadow-sm min-h-[360px] flex flex-col justify-between">
 
             <div>
@@ -67,8 +55,6 @@ export default function AISection() {
                 Generate invoices and suggestions instantly
               </p>
             </div>
-
-            {/* IMAGE */}
             <div className="mt-10">
               <img
                 src="/ai/invoice-tags.png"
@@ -77,8 +63,6 @@ export default function AISection() {
               />
             </div>
           </div>
-
-          {/* Voice Insights */}
           <div className="md:col-span-5 rounded-[28px] border border-[#ececec] bg-white p-6 shadow-sm min-h-[360px] flex flex-col justify-between">
 
             <div>
@@ -90,8 +74,6 @@ export default function AISection() {
                 Access financial insights using voice commands
               </p>
             </div>
-
-            {/* IMAGE */}
             <div className="flex justify-center mt-8">
               <img
                 src="/ai/mic-wave.png"
@@ -100,8 +82,6 @@ export default function AISection() {
               />
             </div>
           </div>
-
-          {/* CashFlow */}
           <div className="md:col-span-5 rounded-[28px] border border-[#ececec] bg-white p-6 shadow-sm min-h-[320px] flex flex-col justify-between">
 
             <div>
@@ -113,8 +93,6 @@ export default function AISection() {
                 Forecast revenue and expenses with AI
               </p>
             </div>
-
-            {/* IMAGE */}
             <div className="mt-8">
               <img
                 src="/ai/cashflow-cards.png"
@@ -123,8 +101,6 @@ export default function AISection() {
               />
             </div>
           </div>
-
-          {/* Collaboration */}
           <div className="md:col-span-7 rounded-[28px] border border-[#ececec] bg-white p-6 shadow-sm min-h-[320px] flex flex-col justify-between">
 
             <div>

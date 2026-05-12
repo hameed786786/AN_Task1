@@ -52,8 +52,6 @@ export default function PricingSection() {
   return (
     <section className="w-full bg-white py-20 px-4 md:px-8">
       <div className="max-w-[1240px] mx-auto">
-
-        {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
 
           {plans.map((plan) => (
@@ -73,8 +71,6 @@ export default function PricingSection() {
                 }
               `}
             >
-
-              {/* Highlighted Overlay */}
               {plan.highlighted && (
                 <>
                   <div className="absolute top-[-8%] right-[-34%] w-[92%] h-[138%] rounded-full bg-white/18 border border-white/10" />
@@ -83,8 +79,6 @@ export default function PricingSection() {
               )}
 
               <div className="relative z-10 flex flex-col h-full">
-
-{/* Icon */}
 <div
   className={`
     mb-8 flex items-center justify-center
@@ -103,8 +97,6 @@ export default function PricingSection() {
     className="w-[28px] h-[28px] object-contain"
   />
 </div>
-
-                {/* Title */}
                 <div className="flex items-center gap-2 mb-2">
                   <h3 className="text-[24px] leading-none tracking-[-0.03em] font-semibold text-[#1f2740]">
                     {plan.title}
@@ -116,13 +108,9 @@ export default function PricingSection() {
                     </span>
                   )}
                 </div>
-
-                {/* Subtitle */}
                 <p className="text-[13px] leading-[1.55] text-[#727b8f] max-w-[240px]">
                   {plan.subtitle}
                 </p>
-
-                {/* Price */}
                 <div className="mt-7 flex items-end gap-2">
                   <span className="text-[54px] leading-none tracking-[-0.05em] font-semibold text-[#1f2740]">
                     {plan.price}
@@ -134,11 +122,7 @@ export default function PricingSection() {
                     </span>
                   )}
                 </div>
-
-                {/* Divider */}
                 <div className="w-full h-[1px] bg-[#dfe3ee] mt-7 mb-8" />
-
-                {/* Features */}
                 <ul className="space-y-5 flex-1">
                   {plan.features.map((feature) => (
                     <li
@@ -149,8 +133,6 @@ export default function PricingSection() {
                     </li>
                   ))}
                 </ul>
-
-                {/* Button */}
                 <button
                   className={`
                     mt-8 h-[48px] w-full rounded-[10px]

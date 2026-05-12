@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative pt-50 pb-24 flex flex-col items-center text-center min-h-screen">
-      {/* Background - light gray */}
       <div className="absolute inset-0 -z-10 bg-[#f5f5f5]" />
 
       <div className="mx-auto w-full max-w-310 px-4 sm:px-6 lg:px-0 z-10 flex flex-col items-center">
