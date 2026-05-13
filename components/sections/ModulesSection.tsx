@@ -1,68 +1,189 @@
 import React from "react";
+import Image from "next/image";
 
 const modules = [
   {
-    title: "Finance",
+    title: "FINANCE",
     items: ["Invoices", "Bills", "Expenses", "Payments"],
+    bgImage: "/bg-images/bg-img1.png",
   },
   {
-    title: "Manage",
+    title: "MANAGE",
     items: ["Customers", "Vendors", "Products", "Price Lists"],
+    bgImage: "/bg-images/bg-img1.png",
   },
   {
-    title: "Operations",
+    title: "OPERATIONS",
     items: ["Tax (GST)", "Banking", "Audit Logs", "Data Import/Export"],
+    bgImage: "/bg-images/bg-img1.png",
   },
 ];
 
 export default function ModulesSection() {
   return (
-    <section className="px-4 py-10 md:px-8">
-      <div className="mx-auto max-w-[1180px] rounded-[36px] bg-[#bdd2f3] px-5 py-8 md:px-10 md:py-12">
-        <div className="mb-10 text-center">
-          <h2 className="text-[38px] md:text-[48px] leading-[1.05] font-medium tracking-[-0.03em] text-[#202020]">
+    <section className="relative w-full px-4 py-10 md:px-8 overflow-hidden">
+
+      {/* MAIN CONTAINER */}
+      <div
+        className="
+          relative
+          mx-auto
+          max-w-[1500px]
+          overflow-hidden
+          rounded-[42px]
+          bg-[#B3D1FF]
+          px-5
+          pb-[48px]
+          pt-[56px]
+          md:px-[60px]
+        "
+      >
+
+        {/* TITLE */}
+        <div className="mb-12 text-center">
+
+          <h2
+            className="
+              font-[var(--font-clash)]
+              text-[38px]
+              font-normal
+              leading-[1.05]
+              tracking-[-0.04em]
+              text-[#1A1A1A]
+              md:text-[52px]
+            "
+          >
             A complete billing and
             <br />
             accounting system
           </h2>
 
-          <p className="mt-4 text-[15px] leading-[1.5] text-[#5f6675]">
+          <p
+            className="
+              mt-5
+              font-[var(--font-clash)]
+              text-[16px]
+              leading-[1.55]
+              text-[#5B6473]
+            "
+          >
             Structured modules designed to manage
             <br />
             every financial operation efficiently.
           </p>
+
         </div>
-        <div className="mb-10 flex justify-center">
-          <div className="overflow-hidden rounded-[28px] border-[4px] border-white shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
-            <img
+
+        {/* DASHBOARD IMAGE */}
+        <div className="relative z-20 mb-12 flex justify-center">
+
+          <div
+            className="
+              relative
+              w-full
+              max-w-[1245px]
+              aspect-[1245/722]
+              overflow-hidden
+              rounded-[34px]
+              border-[5px]
+              border-[#dce9ff]
+              shadow-[0_35px_90px_rgba(15,23,42,0.22)]
+              bg-white
+            "
+          >
+
+            <Image
               src="/dashboard.png"
               alt="Dashboard Preview"
-              className="w-full max-w-[980px] object-cover"
+              fill
+              priority
+              quality={95}
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 1245px"
             />
+
           </div>
+
         </div>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+
+        {/* MODULE CARDS */}
+        <div className="mt-2 flex flex-wrap justify-center gap-6">
 
           {modules.map((module) => (
             <div
               key={module.title}
-              className="relative overflow-hidden rounded-[22px] bg-[#d9ddf3] px-8 py-10 min-h-[250px]"
+              className="
+                relative
+                w-[396px]
+                h-[360px]
+                overflow-hidden
+                rounded-[24px]
+                bg-[#DCE5FF]
+                px-[40px]
+                pt-[48px]
+                shadow-[0_8px_30px_rgba(0,0,0,0.04)]
+              "
             >
-              <div className="absolute left-0 top-0 h-[130px] w-[130px] rounded-br-[120px] bg-white/20" />
-              <div className="absolute right-[-35%] top-[-15%] h-[150%] w-[95%] rounded-full bg-white/10" />
+
+              {/* BG IMAGE */}
+              <Image
+                src={module.bgImage}
+                alt={module.title}
+                fill
+                className="
+                  absolute
+                  inset-0
+                  object-cover
+                  opacity-90
+                "
+                sizes="310px"
+              />
+
+              {/* OVERLAY */}
+              <div className="absolute inset-0 bg-[#DCE5FF]/70" />
+
+              {/* CONTENT */}
               <div className="relative z-10">
-                <h3 className="mb-10 text-[13px] font-extrabold uppercase tracking-[0.28em] text-black">
+
+                {/* TITLE */}
+                <h3
+                  className="
+                    font-[var(--font-clash)]
+                    text-[20px]
+                    font-semibold
+                    tracking-[0.22em]
+                    text-black
+                  "
+                >
                   {module.title}
                 </h3>
-                <ul className="space-y-6">
+
+                {/* ITEMS */}
+                <ul className="mt-12 space-y-7">
+
                   {module.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-5"
+                      className="flex items-center gap-4"
                     >
-                      <div className="flex h-[26px] w-[26px] flex-shrink-0 items-center justify-center rounded-full border-[2px] border-[#6b63ff]">
+
+                      {/* ICON */}
+                      <div
+                        className="
+                          flex
+                          h-[28px]
+                          w-[28px]
+                          items-center
+                          justify-center
+                          rounded-full
+                          border-2
+                          border-[#6C63FF]
+                          bg-white
+                        "
+                      >
+
                         <svg
-                          className="h-3.5 w-3.5 text-[#6b63ff]"
+                          className="h-[13px] w-[13px] text-[#6C63FF]"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -74,19 +195,34 @@ export default function ModulesSection() {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
+
                       </div>
-                      <span className="text-[18px] font-medium text-black">
+
+                      {/* TEXT */}
+                      <span
+                        className="
+                          font-[var(--font-clash)]
+                          text-[19px]
+                          text-[#111111]
+                        "
+                      >
                         {item}
                       </span>
+
                     </li>
                   ))}
+
                 </ul>
+
               </div>
+
             </div>
           ))}
 
         </div>
+
       </div>
+
     </section>
   );
 }

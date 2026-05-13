@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type TestimonialCardProps = {
   quote: string;
@@ -29,10 +30,11 @@ export default function TestimonialCard({
         </h4>
 
         <div className="mt-4 flex items-center justify-center gap-3">
-          <img
+          <Image
             src={icon}
             alt={company}
-            className="w-[30px] h-[30px] object-contain"
+            width={30}
+            height={30}
           />
 
           <span className="text-[15px] text-[#666]">

@@ -3,64 +3,228 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative pt-50 pb-24 flex flex-col items-center text-center min-h-screen">
-      <div className="absolute inset-0 -z-10 bg-[#f5f5f5]" />
+    <section
+      className="
+        relative
+        overflow-hidden
+        bg-[linear-gradient(145deg,#B3D1FF_0%,#B3D1FF_20%,#FFFFFF_50%)]
+        pt-[190px]
+        min-h-[1180px]
+        w-full
+      "
+    >
 
-      <div className="mx-auto w-full max-w-310 px-4 sm:px-6 lg:px-0 z-10 flex flex-col items-center">
+      {/* DECORATIVE BLUR - CLIPPED TO CONTAINER */}
+      <div
+        className="
+          absolute
+          w-[407px]
+          h-[1181px]
+          top-[-66px]
+          left-[-337px]
+          bg-gradient-to-br
+          from-[#B3D1FF]
+          to-transparent
+          rounded-full
+          blur-[80px]
+          opacity-100
+          -z-10
+          pointer-events-none
+        "
+        style={{ transform: 'rotate(45deg)' }}
+      />
+
+      {/* CONTENT */}
+      <div className="relative z-10 mx-auto flex w-full max-w-[1500px] flex-col items-center px-4 text-center sm:px-6 lg:px-8">
+
+        {/* HEADING */}
         <h1
-          style={{ fontFamily: "var(--font-hero)", letterSpacing: "0px" }}
-          className="w-full max-w-297 text-[40px] sm:text-[54px] md:text-[76px] leading-[1.1] md:leading-21.5 font-normal text-[#111827]"
+          className="
+            max-w-[1450px]
+            text-center
+            font-[var(--font-clash)]
+            font-normal
+            text-[#1f1f1f]
+            text-[44px]
+            sm:text-[58px]
+            md:text-[76px]
+            leading-[86px]
+            tracking-[-3px]
+          "
         >
-          <span className="lg:block">Take Control of Your Finances</span>{" "}
-          <span className="lg:block">
-            with{" "}
-            <span className="text-[#0052FF] font-semibold md:inline-block md:align-baseline md:text-[84px] md:leading-21.5">
-              AI
-            </span>
-            -Powered Billing
+
+          {/* LINE 1 */}
+          <span className="block">
+            Take Control of Your Finances
           </span>
+
+          {/* LINE 2 */}
+          <span className="block">
+
+            with{" "}
+
+            {/* AI BOX */}
+            <span
+              className="
+                relative
+                mx-[8px]
+                inline-flex
+                h-[85px]
+                w-[153px]
+                items-center
+                justify-center
+                align-middle
+                bg-white
+              "
+            >
+
+              {/* BORDER */}
+              <span className="absolute inset-0 border-[2px] border-[#8BB3FF]" />
+
+              {/* HANDLES */}
+              <span className="absolute -left-[5px] -top-[5px] h-[12px] w-[12px] border-[2px] border-[#8BB3FF] bg-white" />
+
+              <span className="absolute -right-[5px] -top-[5px] h-[12px] w-[12px] border-[2px] border-[#8BB3FF] bg-white" />
+
+              <span className="absolute -bottom-[5px] -left-[5px] h-[12px] w-[12px] border-[2px] border-[#8BB3FF] bg-white" />
+
+              <span className="absolute -bottom-[5px] -right-[5px] h-[12px] w-[12px] border-[2px] border-[#8BB3FF] bg-white" />
+
+              {/* AI TEXT */}
+              <span
+                className="
+                  relative
+                  z-10
+                  font-[var(--font-clash)]
+                  font-bold
+                  text-[84px]
+                  leading-[86px]
+                  tracking-[-3px]
+                  text-[#0052FF]
+                "
+              >
+                AI
+              </span>
+
+            </span>
+
+            <span className="font-[var(--font-clash)] text-[84px] leading-[86px] tracking-[-3px]">
+              -Powered Billing
+            </span>
+
+          </span>
+
         </h1>
 
-        <p className="mt-6 text-[16px] sm:text-[18px] md:text-[20px] leading-[1.65] text-[#c2c8d4] max-w-215 text-center">
-          Create invoices, track expenses, automate workflows, and gain real-time financial insights<br className="hidden md:block"/>
+        {/* DESCRIPTION */}
+        <p
+          className="
+            mt-8
+            max-w-[1050px]
+            font-[var(--font-clash)]
+            font-normal
+            text-[20px]
+            leading-[140%]
+            tracking-[0]
+            text-center
+            text-[#b6bcc8]
+          "
+        >
+          Create invoices, track expenses, automate workflows, and gain
+          real-time financial insights
+          <br className="hidden md:block" />
           — all in one intelligent platform built for modern businesses.
         </p>
 
-        <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* BUTTONS */}
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+
+          {/* PRIMARY BUTTON */}
           <Link
             href="/signup"
-            className="inline-flex w-full sm:w-auto items-center justify-center h-12 px-10 text-[15px] font-medium text-white bg-[#0f0f0f] rounded-xl shadow-[0_12px_30px_rgba(0,0,0,0.18)] hover:bg-[#1f1f1f] transition-colors"
+            className="
+              inline-flex
+              items-center
+              justify-center
+              w-[244px]
+              h-[53px]
+              rounded-[12px]
+              bg-[#111111]
+              px-[36px]
+              font-[var(--font-poppins)]
+              font-medium
+              text-[16px]
+              text-white
+              transition-all
+              duration-300
+              hover:bg-black
+            "
           >
             Get Started for free
           </Link>
+
+          {/* SECONDARY BUTTON */}
           <Link
             href="/demo"
-            className="inline-flex w-full sm:w-auto items-center justify-center h-12 px-10 text-[15px] font-medium text-[#111827] bg-white border border-[#AAB0BC] rounded-xl shadow-[0_10px_24px_rgba(0,0,0,0.06)] hover:bg-gray-50 transition-colors"
+            className="
+              inline-flex
+              items-center
+              justify-center
+              w-[192px]
+              h-[53px]
+              rounded-[12px]
+              border
+              border-[#b8bec8]
+              bg-white
+              px-[36px]
+              font-[var(--font-poppins)]
+              font-medium
+              text-[16px]
+              text-[#1f1f1f]
+              transition-all
+              duration-300
+              hover:bg-[#fafafa]
+            "
           >
             Book a Demo
           </Link>
-        </div>
-      </div>
-<div className="  w-full px-4 sm:px-6 lg:px-12 bg-white py-12  ">
-  <div className="relative mx-auto aspect-[16/9] w-full max-w-[1200px]">
-    
-    <Image
-      src="/dashboard-preview.png"
-      alt="FinBook Dashboard Preview"
-      fill
-      priority
-      quality={95}
-      className="
-        object-contain
-        rounded-[34px]
-        border border-white
-        mt-4
-      "
-      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
-    />
 
-  </div>
-</div>
+        </div>
+
+      </div>
+
+      {/* DASHBOARD IMAGE */}
+      <div
+        className="
+          absolute
+          left-1/2
+          bottom-[-100px]
+          z-20
+          w-full
+          max-w-[1320px]
+          -translate-x-1/2
+          px-4
+          
+        "
+      >
+
+        <div className="relative aspect-[16/9] w-full">
+
+          <Image
+            src="/dashboard-preview.png"
+            alt="Dashboard Preview"
+            fill
+            priority
+            className="
+              object-contain
+              drop-shadow-[0_40px_80px_rgba(0,0,0,0.12)]
+            "
+            sizes="(max-width: 768px) 100vw, 1320px"
+          />
+
+        </div>
+
+      </div>
 
     </section>
   );

@@ -3,18 +3,19 @@ import FeatureCard from "@/components/ui/FeatureCard";
 
 export default function FeaturesGridSection() {
   return (
-    <section className="w-full bg-white py-[90px] px-4 md:px-8">
+    <section className="w-full bg-white py-[90px] px-6 md:px-8">
 
       <div className="max-w-[1380px] mx-auto">
 
         {/* TOP CONTENT */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-[60px] mb-[42px]">
+        <div className="w-full flex flex-col md:flex-row  items-start gap-[80px] mb-[42px]">
 
           {/* LEFT */}
-          <div className="max-w-[760px]">
+          <div className="max-w-[760px] w-full">
             <h2 className="
+              w-full
               text-[42px]
-              md:text-[64px]
+              md:text-[54px]
               leading-[0.95]
               tracking-[-0.06em]
               font-normal
@@ -51,16 +52,17 @@ export default function FeaturesGridSection() {
               title="Invoice Management"
               description="Create and send professional invoices with real-time tracking"
               image="/features/invoice.png"
-              className="h-[365px]"
-              imageClassName="h-[210px]"
+              className="h-[322px] w-[428]"
+              imageClassName="h-[210px] ml-[20px] mt-[10px]"
             />
 
             <FeatureCard
               title="Financial Reports"
               description="Get real-time insights into revenue, expenses, and profits"
               image="/features/reports.png"
-              className="h-[200px]"
-              imageClassName="h-[110px]"
+              className="h-[200px] w-[428px]"
+              imageClassName="h-[150px]"
+              horizontalLayout={true}
             />
 
           </div>
@@ -72,8 +74,9 @@ export default function FeaturesGridSection() {
               title="Expense Tracking"
               description="Monitor and categorize business expenses effortlessly"
               image="/features/expenses.png"
-              className="h-[583px]"
-              imageClassName="h-[430px]"
+              className="h-[538px] "
+              imageClassName="h-[324px] ml-[15px] mt-[15px] p-[10px]"
+              reverseLayout={true}
             />
 
           </div>
@@ -85,16 +88,16 @@ export default function FeaturesGridSection() {
               title="Payment Management"
               description="Track incoming payments and outstanding dues"
               image="/features/payments.png"
-              className="h-[250px]"
-              imageClassName="h-[150px]"
+              className="h-[253px] w-[385px]"
+              imageClassName="h-[166px]  mt-[10px] ml-[57px]opacity-100 rounded-[12px] "
             />
 
             <FeatureCard
               title="Inventory Management"
               description="Manage products, pricing, and stock levels"
               image="/features/inventory.png"
-              className="h-[315px]"
-              imageClassName="h-[190px]"
+              className="h-[261px] w-[385px]"
+              imageClassName="h-[220px] ml-[18px]  opacity-100 rounded-[12px] mt-[10px] "
             />
 
           </div>
@@ -102,14 +105,14 @@ export default function FeaturesGridSection() {
         </div>
 
         {/* BOTTOM CARD */}
-        <div className="mt-[18px]">
+        <div className="mt-[18px] h-[192px]">
 
           <FeatureCard
             title="Workflow Automation"
             description="Automate recurring invoices and payment reminders"
             image="/features/workflow.png"
-            className="h-[230px]"
-            imageClassName="h-[125px]"
+            className="h-[230px] w-[1320px] flex-row gap-[30px] pl-[20px]"
+            imageClassName="h-[144px]  mt-[50px] p-[10px] opacity-100 rounded-[12px]"
           />
 
         </div>

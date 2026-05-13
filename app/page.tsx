@@ -12,7 +12,7 @@ import FooterSection from "@/components/sections/FooterSection";
 import FeaturesGridSection from "@/components/sections/FeaturesGridSection";
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white font-sans">
+    <main className="min-h-screen bg-white font-sans overflow-x-hidden">
       <Header />
       <Hero />
       <TrustedBy />

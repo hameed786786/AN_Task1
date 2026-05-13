@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type CTASectionProps = {
   title: string;
@@ -16,31 +17,121 @@ export default function CTASection({
   backgroundImage,
 }: CTASectionProps) {
   return (
-    <section className="relative overflow-hidden py-32">
+    <section className="relative overflow-hidden py-[120px] md:py-[150px]">
+
+      {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
-        <img
+
+        <Image
           src={backgroundImage}
           alt="Background"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
+
       </div>
-      <div className="absolute inset-0 bg-white/55 backdrop-blur-[1px]" />
-      <div className="relative z-10 max-w-[1400px] mx-auto px-4 text-center">
-        <h2 className="text-[52px] md:text-[110px] leading-[0.95] tracking-[-0.06em] font-normal text-[#2a2a2a]">
+
+      {/* LIGHT OVERLAY */}
+      <div className="absolute inset-0 bg-white/52" />
+
+      {/* CONTENT */}
+      <div className="relative z-10 mx-auto max-w-[1280px] px-4 text-center">
+
+        {/* TITLE */}
+        <h2
+          className="
+            font-[var(--font-clash)]
+            text-[54px]
+            sm:text-[72px]
+            md:text-[88px]
+            lg:text-[96px]
+            leading-[0.98]
+            tracking-[-0.06em]
+            font-normal
+            text-[#2A2A2A]
+            max-w-[1100px]
+            mx-auto
+          "
+        >
           {title}
         </h2>
-        <p className="mt-10 text-[20px] md:text-[26px] leading-[1.6] text-[#5f6675] max-w-[1000px] mx-auto">
+
+        {/* DESCRIPTION */}
+        <p
+          className="
+            mt-7
+            max-w-[760px]
+            mx-auto
+            font-[var(--font-clash)]
+            text-[18px]
+            md:text-[22px]
+            leading-[1.55]
+            tracking-[-0.02em]
+            text-[#667085]
+          "
+        >
           {description}
         </p>
-        <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6">
-          <button className="h-[78px] px-14 rounded-[20px] bg-black text-white text-[20px] md:text-[24px] font-medium shadow-lg hover:opacity-90 transition-all duration-300">
+
+        {/* BUTTONS */}
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+
+          {/* PRIMARY BUTTON */}
+          <button
+            className="
+              w-[244px]
+              h-[53px]
+              rounded-[14px]
+              bg-black
+              text-white
+              text-[16px]
+              md:text-[18px]
+              font-medium
+              font-[var(--font-clash)]
+              shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+              transition-all
+              duration-300
+              hover:opacity-90
+              flex
+              items-center
+              justify-center
+            "
+          >
             {primaryButtonText}
           </button>
-          <button className="h-[78px] px-14 rounded-[20px] border border-[#6d6d6d] bg-white/40 backdrop-blur-md text-[#2a2a2a] text-[20px] md:text-[24px] font-medium hover:bg-white/60 transition-all duration-300">
+
+          {/* SECONDARY BUTTON */}
+          <button
+            className="
+              w-[244px]
+              h-[53px]
+              rounded-[14px]
+              border
+              border-[#7A7A7A]
+              bg-white/35
+              backdrop-blur-md
+              text-[#2A2A2A]
+              text-[16px]
+              md:text-[18px]
+              font-medium
+              font-[var(--font-clash)]
+              transition-all
+              duration-300
+              hover:bg-white/50
+              flex
+              items-center
+              justify-center
+            "
+          >
             {secondaryButtonText}
           </button>
+
         </div>
+
       </div>
+
     </section>
   );
 }

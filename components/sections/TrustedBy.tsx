@@ -2,17 +2,23 @@ import React from "react";
 
 export default function TrustedBy(): React.ReactElement {
   return (
-    <section className="w-full bg-white py-5 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-1200">
-        <div className="text-center mb-16">
-          <h2 className="text-[48px] md:text-[56px] font-normal text-[#111827] mb-6">
+        <div 
+          className="text-center mb-34 mx-auto w-[540px] h-[144px]"
+        >
+          <h2 
+            className="text-[48px] md:text-[56px] font-normal text-[#111827] mb-6"
+          >
             Trusted by Growing Businesses
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#9ca3af] max-w-2xl mx-auto">
+          <p 
+            className="text-[16px] md:text-[18px] text-[#9ca3af]"
+          >
             Helping teams streamline billing, expenses, and financial workflows with confidence.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           <div className="flex flex-col items-center text-center">
             <h3 className="text-[56px] md:text-[64px] font-bold text-[#111827] mb-2">
               2,500+
@@ -35,8 +41,8 @@ export default function TrustedBy(): React.ReactElement {
             <p className="text-[16px] text-[#6b7280]">Customer Satisfaction</p>
           </div>
         </div>
-        <div className="border-t border-gray-200 pt-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
+        <div className="border-t border-gray-200 pt-24">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-center">
             <div className="flex justify-center">
               <svg width="87" height="70" viewBox="0 0 87 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M81.3099 0V56.5345C81.3099 59.3653 79.9949 61.6684 78.38 61.6684C77.3445 61.6684 76.3798 60.7047 75.8612 59.1538C75.799 58.9676 72.0402 47.6027 68.0609 35.5682C64.2598 24.0786 60.3301 12.1964 60.2625 11.9954C60.0892 11.4718 59.745 11.1332 59.3882 11.1332C58.8232 11.1332 58.3649 11.9393 58.3649 12.9284V56.5345C58.3649 59.3653 57.05 61.6684 55.435 61.6684C54.3996 61.6684 53.4348 60.7047 52.9162 59.1538C52.854 58.9686 49.0928 47.6027 45.1099 35.5693C41.3064 24.0764 37.373 12.1911 37.3066 11.9954C37.1315 11.4718 36.7886 11.1332 36.4324 11.1332C35.8673 11.1332 35.4073 11.9393 35.4073 12.9284V55.6448C35.4073 58.5846 33.9336 61.1627 32.254 61.1627H19.8279C11.5181 61.1627 4.75685 49.3154 4.75685 34.7537C4.75685 20.1908 11.5181 8.34356 19.8279 8.34356H26.2076V0H19.8333C8.87916 0 0 15.5594 0 34.7537C0 53.9479 8.87916 69.5073 19.8333 69.5073H32.379C37.1309 69.5126 40.1864 64.6325 40.1804 55.6332V35.8116C40.1804 35.8116 49.1187 62.7654 49.3421 63.4361C50.6383 67.3164 53.0955 69.7686 55.7091 69.7686C59.8048 69.7686 63.126 63.946 63.126 56.7703V35.8116C63.126 35.8116 71.9997 62.576 72.2877 63.4361C73.5833 67.3164 76.0405 69.7686 78.6541 69.7686C82.7497 69.7686 86.071 63.946 86.071 56.7703V0H81.3099Z" fill="#5A5A5A"/>

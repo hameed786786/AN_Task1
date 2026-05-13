@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
@@ -7,10 +8,12 @@ export default function Header() {
         <div className="mx-auto flex h-18 w-full max-w-310 items-center rounded-full bg-white px-6 shadow-[0_12px_40px_rgba(0,0,0,0.06)]">
           <div className="flex items-center">
             <div className="flex items-center gap-3">
-              <img
+              <Image
                 src="/footer/logo.png"
                 alt="Logo"
-                className="w-[34px] h-[31px] object-contain shrink-0"
+                width={34}
+                height={31}
+                className="shrink-0"
               />
               <div className="flex flex-col justify-center">
                 <span className="text-[17px] font-semibold leading-none tracking-tight text-[#111827]">

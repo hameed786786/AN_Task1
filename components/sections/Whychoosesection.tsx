@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const features = [
   {
@@ -42,7 +43,7 @@ const features = [
 export default function WhyChooseSection() {
   return (
     <section className="w-full bg-white py-24 px-4 md:px-8">
-      <div className="max-w-[1180px] mx-auto">
+      <div className="max-w-[1380px] mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-[34px] md:text-[54px] leading-[1.05] tracking-[-0.04em] font-medium text-[#202020]">
             Why choose our billing platform
@@ -62,10 +63,11 @@ export default function WhyChooseSection() {
               className="rounded-[20px] bg-[#f8f8f8] border border-[#eeeeee] p-8 min-h-[260px] transition-all duration-300 hover:shadow-lg"
             >
               <div className="mb-7">
-                <img
+                <Image
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-[46px] h-[46px] object-contain"
+                  width={46}
+                  height={46}
                 />
               </div>
               <h3 className="text-[24px] leading-[1.15] tracking-[-0.03em] font-semibold text-black">
