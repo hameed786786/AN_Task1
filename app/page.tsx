@@ -2,7 +2,6 @@ import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
 import TrustedBy from "@/components/sections/TrustedBy";
 import ExploreSection from "@/components/sections/ExploreSection";
-import FinanceFeaturesSection from "@/components/sections/FinanceFeaturesSection";
 import ModulesSection from "@/components/sections/ModulesSection";
 import AISection from "@/components/sections/AISection";
 import WhyChooseSection from "@/components/sections/Whychoosesection";
